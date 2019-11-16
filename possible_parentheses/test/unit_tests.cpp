@@ -7,6 +7,11 @@ void showResult(std::list<std::string> & result) {
     }
 };
 
+TEST(test_recursive, 0) {
+    std::list<std::string> result;
+    possibleParenthesis(0, result);
+    ASSERT_EQ(result.size(), 0);
+}
 
 TEST(test_recursive, 1) {
     std::list<std::string> result;
@@ -37,5 +42,3 @@ TEST(test_recursive, 3) {
         ASSERT_EQ(result.size(), i);
     }
 }
-
-// and more
